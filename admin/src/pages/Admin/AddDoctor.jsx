@@ -18,7 +18,6 @@ const AddDoctor = () => {
     const [degree, setDegree] = useState('')
     const [address1, setAddress1] = useState('')
     const [address2, setAddress2] = useState('')
-
     const { backendUrl } = useContext(AppContext)
     const { aToken } = useContext(AdminContext)
 
@@ -44,7 +43,6 @@ const AddDoctor = () => {
             formData.append('degree', degree)
             formData.append('address', JSON.stringify({ line1: address1, line2: address2 }))
 
-                     
             formData.forEach((value, key) => {
                 console.log(`${key}: ${value}`);
             });
@@ -72,12 +70,9 @@ const AddDoctor = () => {
         }
 
     }
-
     return (
         <form onSubmit={onSubmitHandler} className='m-5 w-full'>
-
             <p className='mb-3 text-lg font-medium'>Add Doctor</p>
-
             <div className='bg-white px-8 py-8 border rounded w-full max-w-4xl max-h-[80vh] overflow-y-scroll'>
                 <div className='flex items-center gap-4 mb-8 text-gray-500'>
                     <label htmlFor="doc-img">
@@ -164,12 +159,8 @@ const AddDoctor = () => {
                     <p className='mt-4 mb-2'>About Doctor</p>
                     <textarea onChange={e => setAbout(e.target.value)} value={about} className='w-full px-4 pt-2 border rounded' rows={5} placeholder='write about doctor'></textarea>
                 </div>
-
                 <button type='submit' className='bg-green-400 px-10 py-3 mt-4 text-white rounded-full'>Add doctor</button>
-
             </div>
-
-
         </form>
     )
 }

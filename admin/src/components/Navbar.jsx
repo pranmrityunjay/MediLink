@@ -8,9 +8,7 @@ const Navbar = () => {
 
   const { dToken, setDToken } = useContext(DoctorContext)
   const { aToken, setAToken } = useContext(AdminContext)
-
   const navigate = useNavigate()
-
   const logout = () => {
     navigate('/')
     dToken && setDToken('')
