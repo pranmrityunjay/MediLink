@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose,{Schema} from "mongoose";
 
 const doctorSchema = new mongoose.Schema({
     name: { 
@@ -58,5 +58,5 @@ const doctorSchema = new mongoose.Schema({
 { minimize: false },
 )
 
-const doctorModel = mongoose.models.doctor || mongoose.model("doctor", doctorSchema);
-export default doctorModel;
+const DoctorModel = mongoose.model("Doctor", doctorSchema);
+export default DoctorModel;

@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import mongoose,{Schema} from "mongoose";
 
 const userSchema = new mongoose.Schema({
     name: { 
@@ -37,5 +37,5 @@ const userSchema = new mongoose.Schema({
 }
 )
 
-const userModel = mongoose.models.user || mongoose.model("user", userSchema);
-export default userModel;
+const UserModel = mongoose.model("user", userSchema);
+export default UserModel;

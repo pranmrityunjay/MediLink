@@ -1,4 +1,4 @@
-import mongoose from "mongoose"
+import mongoose,{Schema} from "mongoose"
 
 const appointmentSchema = new mongoose.Schema({
     userId: { 
@@ -48,5 +48,5 @@ const appointmentSchema = new mongoose.Schema({
 }
 )
 
-const appointmentModel = mongoose.models.appointment || mongoose.model("appointment", appointmentSchema)
-export default appointmentModel
+const AppointmentModel = mongoose.model("Appointment", appointmentSchema)
+export default AppointmentModel
