@@ -1,0 +1,34 @@
+<svg
+  width="150"
+  height="150"
+  viewBox="0 0 150 150"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E90FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00BFFF;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <g>
+    <path
+      d="M37.5 75 L56.25 37.5 L75 75 L56.25 112.5 Z"
+      fill="url(#grad1)"
+    />
+    <circle cx="56.25" cy="22.5" r="10" fill="#00BFFF" />
+    <path
+      d="M52.5 82.5 Q67.5 105, 82.5 82.5"
+      stroke="url(#grad2)"
+      stroke-width="8"
+      fill="none"
+    />
+    <text x="25" y="135" font-family="Arial" font-size="16" fill="#00BFFF">
+      MediLink
+    </text>
+  </g>
+</svg>
+s:\Downloads\logo_img.png
