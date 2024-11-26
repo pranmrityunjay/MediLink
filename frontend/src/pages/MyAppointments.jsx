@@ -51,9 +51,15 @@ const MyAppointments = () => {
 
     }
 
-    const initPay = (order) => {
+    const initPay = async (order) => {
+        const { data } = await axios.post(
+            backendUrl + '/api/user/RAZORPAY_KEY_ID', 
+            {}, // No payload for this request
+            { headers: { token } } // Authorization token
+        );
+        
         const options = {
-            key: import.meta.env.VITE_RAZORPAY_KEY_ID,
+            key: data,
             amount: order.amount,
             currency: order.currency,
             name: 'Appointment Payment',

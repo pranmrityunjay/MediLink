@@ -144,7 +144,7 @@ const bookAppointment = async (req, res) => {
 const cancelAppointment = async (req, res) => {
     try {
         const { userId, appointmentId } = req.body
-        const appointmentData = await appointmentModel.findById(appointmentId)
+        const appointmentData = await AppointmentModel.findById(appointmentId)
         if (appointmentData.userId !== userId) {
             return res.json({ success: false, message: 'Unauthorized action' })
         }
@@ -218,6 +218,16 @@ const verifyRazorpay = async (req, res) => {
     }
 }
 
+const razorpayKeyId = async (req, res) => {
+    try {
+        const id = process.env.RAZORPAY_KEY_ID
+        console.log("id", id)
+        res.json({success: true, id})
+    } catch (error) {
+        console.log(error)
+        res.json({ success: false, message: error.message })
+    }
+}
 export {
     loginUser,
     registerUser,
@@ -227,5 +237,6 @@ export {
     listAppointment,
     cancelAppointment,
     paymentRazorpay,
-    verifyRazorpay
+    verifyRazorpay,
+    razorpayKeyId
 }
